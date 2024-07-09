@@ -5,12 +5,11 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Form = () => {
   const [{ register, handleSubmit, errors }] = useForms();
+  const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = (data: FormSchema) => {
     console.log(data);
   };
-
-  const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);

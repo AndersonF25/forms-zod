@@ -4,10 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 529px;
+  justify-content: center;
+  width: 100%;
   padding-top: 4px;
   gap: 20px;
-  margin-top: 45px;
+
+  @media (max-width:560px) {
+    padding: 0 15px 10px 15px;
+  }
 
   .container-header {
     width: 100%;
@@ -15,7 +19,7 @@
 
     h1 {
       font-weight: 800;
-      font-size: 2.6rem;
+      font-size: 2.9rem;
       color: var(--white);
     }
 
@@ -81,14 +85,20 @@
       }
 
       .error-text {
-        color: #c12626;
+        color: var(--error-color);
         font-size: 0.8rem;
+        font-weight: 500;
       }
 
       .btn-showPassword {
         position: absolute;
-        bottom: 40px;
-        right: 8px;
+        right: 9px;
+        top: 15px;
+        border: none;
+        background-color: transparent;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: var(--white);
       }
     }
   }

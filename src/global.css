@@ -4,6 +4,7 @@
   --green-hover: #176b3c;
   --white: #eaeaea;
   --bg-input: #30355a;
+  --error-color: #c12626;
 }
 
 * {
@@ -18,5 +19,6 @@
 body {
   display: grid;
   place-items: center;
+  height: 100dvh;
   background-color: var(--bg-color);
 }

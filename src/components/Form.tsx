@@ -4,7 +4,6 @@ import { FormSchema } from "../schemas/formSchemas";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Form = () => {
-    
   const [{ register, handleSubmit, errors }] = useForms();
 
   const onSubmit = (data: FormSchema) => {
@@ -21,10 +20,9 @@ const Form = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="container-form">
       <div className="container-pai">
         <div className="container-input">
-          <label className="label-form" htmlFor="">
-            Nome:
-          </label>
+          <label className="label-form" htmlFor=""></label>
           <input
+            autoComplete="off"
             type="text"
             id="name"
             placeholder="Digite seu nome"
@@ -37,8 +35,9 @@ const Form = () => {
         </div>
 
         <div className="container-input">
-          <label className="label-form">Sobrenome:</label>
+          <label className="label-form"></label>
           <input
+            autoComplete="off"
             type="text"
             id="lastname"
             placeholder="Digite seu sobrenome"
@@ -51,9 +50,7 @@ const Form = () => {
         </div>
 
         <div className="container-input">
-          <label className="label-form" htmlFor="gender">
-            Gênero:
-          </label>
+          <label className="label-form" htmlFor="gender"></label>
           <select className="input" id="gender" {...register("gender")}>
             <option value="select">Selecione seu gênero</option>
             <option value="male">Masculino</option>
@@ -65,11 +62,12 @@ const Form = () => {
           )}
         </div>
         <div className="container-input">
-          <label className="label-form">Email:</label>
+          <label className="label-form"></label>
           <input
+            autoComplete="off"
             type="email"
             id="email"
-            placeholder="Digite seu melhor agree"
+            placeholder="Digite seu melhor email"
             {...register("email")}
             className="input"
           />
@@ -79,8 +77,9 @@ const Form = () => {
         </div>
 
         <div className="container-input">
-          <label className="label-form">Senha:</label>
+          <label className="label-form"></label>
           <input
+            autoComplete="off"
             type={showPassword ? "text" : "password"}
             id="password"
             placeholder="Digite sua senha"
@@ -100,8 +99,9 @@ const Form = () => {
         </div>
 
         <div className="container-input">
-          <label className="label-form">Confirme sua senha:</label>
+          <label className="label-form"></label>
           <input
+            autoComplete="off"
             type={showPassword ? "text" : "password"}
             id="confirmPassword"
             placeholder="Digite sua senha novamente"
@@ -117,7 +117,12 @@ const Form = () => {
 
         <div className="container-input">
           <div className="checkbox">
-            <input type="checkbox" id="agree" {...register("agree")} />
+            <input
+              type="checkbox"
+              id="agree"
+              {...register("agree")}
+              autoComplete="off"
+            />
             <label className="label-form">Aceito os termos</label>
           </div>
 

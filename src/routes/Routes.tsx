@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Thanks from "../pages/Thanks";
-import Home from "../pages/Home";
+import Form from "../pages/Form";
 
 const RoutesProvider = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Form />} />
       <Route path="/thanks" element={<Thanks />} />
     </Routes>
   );
